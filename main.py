@@ -34,7 +34,6 @@ def load_dataset(dataset):
 		if dataset == 'MSL': file = 'C-1_' + file
 		if dataset == 'UCR': file = '136_' + file
 		if dataset == 'NAB': file = 'ec2_request_latency_system_failure_' + file
-		if dataset == 'E104': file = 'arma_' + file
 		loader.append(np.load(os.path.join(folder, f'{file}.npy')))
 	# loader = [i[:, debug:debug+1] for i in loader]
 	if args.less: loader[0] = cut_array(0.2, loader[0])
